@@ -1,0 +1,117 @@
+body{
+ margin:0;
+ font-family:Arial, sans-serif;
+ text-align:center;
+ color:white;
+ overflow:hidden;
+ background:#111;
+ transition:0.5s;
+}
+.light{
+ background:#ffe6f0;
+ color:#c70039;
+}
+
+/* Buttons */
+button{
+ padding:12px 25px;
+ border:none;
+ border-radius:25px;
+ font-size:16px;
+ margin:8px;
+ cursor:pointer;
+}
+
+/* Theme */
+#themeBtn{
+ position:fixed;
+ top:10px;
+ right:10px;
+}
+
+/* Header */
+h1{
+ margin-top:40px;
+ text-shadow:0 0 10px pink;
+}
+
+/* Typing */
+#typing{font-size:1.2em;margin:10px;}
+
+/* Popup */
+#popup{
+ display:none;
+ background:white;
+ color:#ff0066;
+ padding:25px;
+ border-radius:20px;
+ position:fixed;
+ top:50%;
+ left:50%;
+ transform:translate(-50%,-50%);
+}
+
+/* Hearts 3D */
+.heart{
+ position:fixed;
+ bottom:-20px;
+ font-size:26px;
+ animation: floatUp 6s linear infinite;
+ transform:rotateX(20deg) rotateY(20deg);
+}
+@keyframes floatUp{
+ to{transform:translateY(-800px) scale(1.5);opacity:0;}
+}
+
+/* Snow */
+.snow{
+ position:fixed;
+ top:0;
+ font-size:16px;
+ animation: fall 6s linear infinite;
+}
+@keyframes fall{
+ to{transform:translateY(100vh);}
+}
+
+/* Fireworks */
+.firework{
+ position:absolute;
+ width:6px;
+ height:6px;
+ background:red;
+ border-radius:50%;
+ animation: explode 1s ease-out forwards;
+}
+@keyframes explode{
+ to{transform:scale(20);opacity:0;}
+}
+
+/* Confetti */
+.confetti{
+ position:fixed;
+ top:0;
+ width:10px;
+ height:10px;
+ animation: fall 4s linear infinite;
+}
+
+/* Music Player */
+#player{
+ position:fixed;
+ bottom:10px;
+ left:50%;
+ transform:translateX(-50%);
+ background:#ff0066;
+ padding:10px 20px;
+ border-radius:20px;
+ color:white;
+}
+
+/* No button */
+#noBtn{position:absolute;background:#555;color:white;}
+
+@media(max-width:600px){
+ h1{font-size:2em;}
+ #typing{font-size:1em;}
+}
