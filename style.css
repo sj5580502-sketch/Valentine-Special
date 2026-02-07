@@ -1,10 +1,9 @@
 body{
 margin:0;
-font-family:Arial;
+font-family:Arial, sans-serif;
 text-align:center;
 color:white;
-overflow:hidden;
-background:linear-gradient(-45deg,#ff0066,#ff66cc,#6600ff,#ff0066);
+background:#111;
 background-size:400% 400%;
 animation:gradientBG 10s ease infinite;
 }
