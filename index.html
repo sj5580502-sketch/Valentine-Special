@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Love ❤️</title>
-    <link rel="stylesheet" href="./style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <button id="themeBtn" onclick="toggleTheme()">🌙 / ☀️</button>
+
+<div id="gate">
+<h2>Enter Love Password 💌</h2>
+<input type="password" id="pass" placeholder="Hint: komal">
+<button onclick="unlock()">Unlock ❤️</button>
+</div>
+
+<div id="main">
+
+<button id="themeBtn" onclick="toggleTheme()">🌙 / ☀️</button>
 
 <h1>Happy Valentine Komal 💖</h1>
+
 <div id="typing"></div>
+<div id="loveTimer"></div>
 
 <button onclick="showPopup()">Open My Heart 💌</button>
 
@@ -21,14 +33,16 @@
 </div>
 
 <div id="player">
-<button onclick="playMusic()">▶ Play</button>
-<button onclick="pauseMusic()">⏸ Pause</button>
+<button onclick="playMusic()">▶</button>
+<button onclick="pauseMusic()">⏸</button>
 </div>
 
 <audio id="music" loop>
 <source src="./Saiyaara-Mp3-Song-by-Faheem-Abdullah(PagalWorldi.com.co).mp3" type="audio/mp3">
 </audio>
 
-<script src="./script.js"></script>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
