@@ -1,117 +1,149 @@
 body{
- margin:0;
- font-family:Arial, sans-serif;
- text-align:center;
- color:white;
- overflow:hidden;
- background:#111;
- transition:0.5s;
+margin:0;
+font-family:Arial;
+text-align:center;
+color:white;
+overflow:hidden;
+background:linear-gradient(-45deg,#ff0066,#ff66cc,#6600ff,#ff0066);
+background-size:400% 400%;
+animation:gradientBG 10s ease infinite;
 }
+
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
 .light{
- background:#ffe6f0;
- color:#c70039;
+background:#ffe6f0;
+color:#c70039;
 }
 
-/* Buttons */
 button{
- padding:12px 25px;
- border:none;
- border-radius:25px;
- font-size:16px;
- margin:8px;
- cursor:pointer;
+padding:12px 25px;
+border:none;
+border-radius:25px;
+font-size:16px;
+margin:8px;
+cursor:pointer;
 }
 
-/* Theme */
 #themeBtn{
- position:fixed;
- top:10px;
- right:10px;
+position:fixed;
+top:10px;
+right:10px;
 }
 
-/* Header */
 h1{
- margin-top:40px;
- text-shadow:0 0 10px pink;
+margin-top:40px;
+animation:glow 2s infinite alternate;
 }
 
-/* Typing */
-#typing{font-size:1.2em;margin:10px;}
+@keyframes glow{
+from{text-shadow:0 0 10px pink;}
+to{text-shadow:0 0 25px hotpink,0 0 40px #ff66cc;}
+}
 
-/* Popup */
+#typing,#loveTimer{
+margin:10px;
+font-size:1.2em;
+}
+
 #popup{
- display:none;
- background:white;
- color:#ff0066;
- padding:25px;
- border-radius:20px;
- position:fixed;
- top:50%;
- left:50%;
- transform:translate(-50%,-50%);
+display:none;
+backdrop-filter:blur(15px);
+background:rgba(255,255,255,0.15);
+border:1px solid rgba(255,255,255,0.4);
+padding:30px;
+border-radius:25px;
+box-shadow:0 0 40px rgba(255,0,102,0.7);
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
 }
 
-/* Hearts 3D */
-.heart{
- position:fixed;
- bottom:-20px;
- font-size:26px;
- animation: floatUp 6s linear infinite;
- transform:rotateX(20deg) rotateY(20deg);
-}
-@keyframes floatUp{
- to{transform:translateY(-800px) scale(1.5);opacity:0;}
-}
-
-/* Snow */
-.snow{
- position:fixed;
- top:0;
- font-size:16px;
- animation: fall 6s linear infinite;
-}
-@keyframes fall{
- to{transform:translateY(100vh);}
-}
-
-/* Fireworks */
-.firework{
- position:absolute;
- width:6px;
- height:6px;
- background:red;
- border-radius:50%;
- animation: explode 1s ease-out forwards;
-}
-@keyframes explode{
- to{transform:scale(20);opacity:0;}
-}
-
-/* Confetti */
-.confetti{
- position:fixed;
- top:0;
- width:10px;
- height:10px;
- animation: fall 4s linear infinite;
-}
-
-/* Music Player */
 #player{
- position:fixed;
- bottom:10px;
- left:50%;
- transform:translateX(-50%);
- background:#ff0066;
- padding:10px 20px;
- border-radius:20px;
- color:white;
+position:fixed;
+bottom:10px;
+left:50%;
+transform:translateX(-50%);
+background:#ff0066;
+padding:10px 20px;
+border-radius:20px;
 }
 
-/* No button */
-#noBtn{position:absolute;background:#555;color:white;}
+#noBtn{
+position:absolute;
+background:#555;
+color:white;
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:26px;
+animation:floatUp 6s linear infinite;
+}
+
+@keyframes floatUp{
+to{transform:translateY(-800px) scale(1.5);opacity:0;}
+}
+
+.snow{
+position:fixed;
+top:0;
+animation:fall 6s linear infinite;
+}
+
+@keyframes fall{
+to{transform:translateY(100vh);}
+}
+
+.firework{
+position:absolute;
+width:6px;
+height:6px;
+background:red;
+border-radius:50%;
+animation:explode 1s ease-out forwards;
+}
+
+@keyframes explode{
+to{transform:scale(20);opacity:0;}
+}
+
+.confetti{
+position:fixed;
+top:0;
+width:10px;
+height:10px;
+animation:fall 4s linear infinite;
+}
+
+#gate{
+position:fixed;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+#main{display:none;}
 
 @media(max-width:600px){
- h1{font-size:2em;}
- #typing{font-size:1em;}
+h1{font-size:1.8em;}
+}
+
+#typing::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
