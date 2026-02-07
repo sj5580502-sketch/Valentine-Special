@@ -1,6 +1,6 @@
 function unlock(){
 let p=document.getElementById("pass").value.toLowerCase();
-if(p==="komal"){
+if(p==="2409"){
 document.getElementById("gate").style.display="none";
 document.getElementById("main").style.display="block";
 }else alert("Wrong love password 😜");
@@ -10,30 +10,22 @@ function toggleTheme(){
 document.body.classList.toggle("light");
 }
 
-let text = "My forever begins with you ❤️";
+let text = "Komal, I feel something real with you ❤️";
 let i = 0;
 let typingDiv = document.getElementById("typing");
 function typing() {
     if (i < text.length) {
         typingDiv.innerHTML += text.charAt(i);
         i++;
-        setTimeout(typing, 220);
+        setTimeout(typing, 100);
     }
 }
-
 typing();
-
-// let startDate=new Date("july 27, 2020");
-// setInterval(()=>{
-// let diff=new Date()-startDate;
-// let days=Math.floor(diff/(1000*60*60*24));
-// loveTimer.innerHTML="💖 Loving you for "+days+" days";
-// },1000);
 
 function showPopup(){popup.style.display="block";}
 
 function yes(){
-alert("Komal, I feel something real with you. Happy Valentine's ❤️");
+alert("Yesss😍, You just made me the happiest. Happy Valentine's ❤️");
 confettiBlast();
 
 for(let i=0;i<30;i++){
