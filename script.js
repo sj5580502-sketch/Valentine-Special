@@ -1,6 +1,6 @@
 function unlock(){
 let p=document.getElementById("pass").value.toLowerCase();
-if(p==="2409"){
+if(p==="bubu"){
 document.getElementById("gate").style.display="none";
 document.getElementById("main").style.display="block";
 }else alert("Wrong love password 😜");
@@ -94,3 +94,4 @@ setTimeout(()=>spark.remove(),600);
 let music=document.getElementById("music");
 function playMusic(){music.play();}
 function pauseMusic(){music.pause();}
+
